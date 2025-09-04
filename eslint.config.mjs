@@ -18,16 +18,13 @@ const eslintConfig = [
 
   {
     plugins: {
-      // Use the plugin IDs that match rule names
       "react-hooks": reactHooks,
       import: importPlugin,
       "@typescript-eslint": tseslint.plugin,
     },
     languageOptions: {
-      // Use typescript-eslint parser for TS/JS files (ESLint v9 flat config)
       parser: tseslint.parser,
       parserOptions: {
-        // Project service is faster and works across workspaces with TS 5+
         projectService: true,
         tsconfigRootDir: __dirname,
         ecmaFeatures: {
