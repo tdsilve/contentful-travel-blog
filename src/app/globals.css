@@ -1,12 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.swiper-button-next:after {
-  content: url("/icons/arrow-right.svg") !important;
-  @apply mr-3;
-}
-.swiper-button-prev:after {
-  content: url("/icons/arrow-left.svg") !important;
-  @apply ml-3;
-}
+@import "tailwindcss";
