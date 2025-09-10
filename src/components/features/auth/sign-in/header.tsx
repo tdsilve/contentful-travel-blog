@@ -1,9 +1,8 @@
-import { Flex } from "@/components/ui/flex";
-import { Logo } from "@/components/ui/logo";
+import { Flex, Logo } from "@/components";
 
 export const Header = () => {
   return (
-    <Flex className=" w-full max-w-4xl mx-auto h-20">
+    <Flex className=" w-full max-w-4xl mx-auto h-20 mb-4">
       <Flex
         className="w-[120px] h-full md:w-[160px] lg:w-[200px]"
         items="center"

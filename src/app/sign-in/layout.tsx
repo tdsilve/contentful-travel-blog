@@ -1,4 +1,4 @@
-import { Header } from "@/components/features/auth/sign-in/header";
+import { Header } from "@/components";
 import React from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
