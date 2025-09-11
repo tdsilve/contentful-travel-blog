@@ -3,3 +3,4 @@
  */
 
 export * from "./auth/sign-in/sign-in.schema";
+export * from "./auth/sign-up/sign-up.schema";

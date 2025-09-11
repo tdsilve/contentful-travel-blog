@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 
 const variantClasses: Record<string, string> = {
   default: "",
-  signIn:
-    " w-full border border-white/40 bg-white/10 placeholder:text-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400",
+  auth: "shadow-none w-full border border-white/40 bg-white/10 placeholder:text-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400",
 };
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {

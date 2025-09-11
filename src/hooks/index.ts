@@ -3,3 +3,4 @@
  */
 
 export * from "./auth/sign-in/useSignInForm";
+export * from "./auth/sign-in/useSignUpForm";
