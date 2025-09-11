@@ -1,4 +1,4 @@
 {
-  "directory": ["src/models", "src/components", "src/lib"],
+  "directory": ["src/models", "src/components", "src/lib", "src/hooks"],
   "delete": true
 }

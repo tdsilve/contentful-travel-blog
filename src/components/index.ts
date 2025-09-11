@@ -7,5 +7,7 @@ export * from "./features/auth/sign-in/form/form-sign-in-container";
 export * from "./features/auth/sign-in/form/form-sign-in";
 export * from "./ui/button";
 export * from "./ui/flex";
+export * from "./ui/form";
 export * from "./ui/input";
+export * from "./ui/label";
 export * from "./ui/logo/logo";

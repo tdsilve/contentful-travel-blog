@@ -1,36 +1,61 @@
 "use client";
-import { useForm, Controller } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Input, FormSignInContainer } from "@/components";
-import { SignInSchema } from "@/models";
+import { useSignInForm } from "@/hooks";
+import {
+  Input,
+  FormSignInContainer,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+  Button,
+} from "@/components";
 
 export const FormSignIn = () => {
-  const { control } = useForm({
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-    resolver: zodResolver(SignInSchema),
-  });
+  const { form, control, onSubmit, isSubmitting } = useSignInForm();
   return (
     <FormSignInContainer>
-      <form>
-        <Controller
-          name="email"
-          control={control}
-          render={({ field }) => (
-            <Input type="email" placeholder="Email" {...field} />
-          )}
-        />
-        <Controller
-          name="password"
-          control={control}
-          render={({ field }) => (
-            <Input type="password" placeholder="Password" {...field} />
-          )}
-        />
-        <Input type="submit" />
-      </form>
+      <Form {...form}>
+        <form onSubmit={onSubmit} className="space-y-4">
+          <FormField
+            name="email"
+            control={control}
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input placeholder="Email" {...field} variant="signIn" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            name="password"
+            control={control}
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    type="password"
+                    placeholder="Password"
+                    {...field}
+                    variant="signIn"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full py-6"
+            // className="bg-[#F0F2F5]"
+          >
+            Submit
+          </Button>
+        </form>
+      </Form>
     </FormSignInContainer>
   );
 };
