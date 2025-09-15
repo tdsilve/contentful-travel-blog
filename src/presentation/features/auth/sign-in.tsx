@@ -1,5 +1,5 @@
 import React from "react";
-import { FormSignIn, FormAuthContainer, FormAuthButton } from "@/components";
+import { FormSignIn, FormAuthContainer, FormAuthButton } from "@/presentation";
 import Link from "next/link";
 
 type SignInProps = {

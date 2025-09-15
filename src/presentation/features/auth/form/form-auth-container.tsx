@@ -1,4 +1,4 @@
-import { Flex, FormAuthTitle } from "@/components";
+import { Flex, FormAuthTitle } from "@/presentation";
 
 type FormAuthContainerProps = {
   title: string;

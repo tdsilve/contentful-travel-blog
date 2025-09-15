@@ -1,5 +1,5 @@
 import React from "react";
-import { FormSignUp, FormAuthContainer, FormAuthButton } from "@/components";
+import { FormSignUp, FormAuthContainer, FormAuthButton } from "@/presentation";
 
 type SignInProps = {
   toggleVariant: () => void;

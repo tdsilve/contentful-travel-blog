@@ -1,4 +1,4 @@
-import { Flex, Logo } from "@/components";
+import { Flex, Logo } from "@/presentation";
 
 export const Header = () => {
   return (

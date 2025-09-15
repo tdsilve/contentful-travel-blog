@@ -1,5 +1,5 @@
-import React from 'react'
-import { cn } from '@/lib/utils'
+import React from "react";
+import { cn } from "@/lib/utils";
 
 const props = {
   gap: {
@@ -46,7 +46,7 @@ const props = {
     baseline: "items-baseline",
     stretch: "items-stretch",
   },
-  justify:  {
+  justify: {
     start: "justify-start",
     end: "justify-end",
     center: "justify-center",
@@ -54,7 +54,7 @@ const props = {
     around: "justify-around",
     evenly: "justify-evenly",
   },
-  wrap:  {
+  wrap: {
     true: "flex-wrap",
     wrap: "flex-wrap",
     reverse: "flex-wrap-reverse",
@@ -63,17 +63,36 @@ const props = {
 };
 
 type FlexProps = React.HTMLAttributes<HTMLDivElement> & {
-    gap?: keyof typeof props.gap;
-    items?: keyof typeof props.items;
-    justify?: keyof typeof props.justify;
-    wrap?: keyof typeof props.wrap;
-}
+  gap?: keyof typeof props.gap;
+  items?: keyof typeof props.items;
+  justify?: keyof typeof props.justify;
+  wrap?: keyof typeof props.wrap;
+};
 
-export const  Flex = ({ className, gap, items, justify, wrap, children, ref, ...rest }: FlexProps & { ref?: React.Ref<HTMLDivElement> }) => {
-  
+export const Flex = ({
+  className,
+  gap,
+  items,
+  justify,
+  wrap,
+  children,
+  ref,
+  ...rest
+}: FlexProps & { ref?: React.Ref<HTMLDivElement> }) => {
   return (
-    <div ref={ref} {...rest} className={cn("flex", gap != null  && props.gap[gap], items && props.items[items], justify && props.justify[justify], wrap && props.wrap[wrap], className)}>
-        {children}
+    <div
+      ref={ref}
+      {...rest}
+      className={cn(
+        "flex",
+        gap != null && props.gap[gap],
+        items && props.items[items],
+        justify && props.justify[justify],
+        wrap && props.wrap[wrap],
+        className,
+      )}
+    >
+      {children}
     </div>
-  )
-}
+  );
+};

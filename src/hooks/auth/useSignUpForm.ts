@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SignUpSchema, SignUpInput } from "@/models";
+import { SignUpSchema, SignUpInput } from "@/domain";
 
 export const useSignUpForm = () => {
   const form = useForm({

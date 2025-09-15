@@ -8,7 +8,7 @@ import {
   FormItem,
   FormMessage,
   Button,
-} from "@/components";
+} from "@/presentation";
 
 export const FormSignUp = () => {
   const { form, control, onSubmit, isSubmitting } = useSignUpForm();

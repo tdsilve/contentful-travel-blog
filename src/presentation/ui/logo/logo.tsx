@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 type LogoProps = {
   color?: "default" | "white";
@@ -7,7 +7,6 @@ type LogoProps = {
   width?: number;
   height?: number;
 };
-
 
 const logos = {
   default: {
@@ -20,10 +19,22 @@ const logos = {
   },
 };
 
-export const Logo = ({width = 135, height = 32, color = "default", format = "svg", className}: LogoProps) => {
+export const Logo = ({
+  width = 135,
+  height = 32,
+  color = "default",
+  format = "svg",
+  className,
+}: LogoProps) => {
   const logo = logos[color];
   const src = !logo[format] ? logos["default"]["svg"] : logo[format];
   return (
-    <Image src={src} alt="Logo" width={width} height={height} className={className} />
-  )
-}
+    <Image
+      src={src}
+      alt="Logo"
+      width={width}
+      height={height}
+      className={className}
+    />
+  );
+};

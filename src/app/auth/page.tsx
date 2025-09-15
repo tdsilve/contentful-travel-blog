@@ -1,5 +1,5 @@
 "use client";
-import { SignIn, SignUp } from "@/components";
+import { SignIn, SignUp } from "@/presentation";
 import React from "react";
 
 export default function Page() {

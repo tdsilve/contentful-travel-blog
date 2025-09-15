@@ -41,6 +41,7 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+    // ignorePatterns: ["app/generated/prisma/**"],
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
@@ -53,6 +54,7 @@ const eslintConfig = [
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/display-name": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     },
   },
 ];
