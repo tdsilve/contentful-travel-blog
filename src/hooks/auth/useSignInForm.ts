@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SignInSchema, SignInInput } from "@/domain";
+import { SignInSchema, SignInParams } from "@/presentation";
 
 export const useSignInForm = () => {
   const form = useForm({
@@ -16,7 +16,7 @@ export const useSignInForm = () => {
     handleSubmit,
     formState: { isSubmitting },
   } = form;
-  const onSubmit = handleSubmit((data: SignInInput) => console.log(data));
+  const onSubmit = handleSubmit((data: SignInParams) => console.log(data));
 
   return {
     form,

@@ -4,3 +4,4 @@
 
 export * from "./prisma";
 export * from "./utils";
+export * from "./api/error";

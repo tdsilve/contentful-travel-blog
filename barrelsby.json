@@ -1,11 +1,4 @@
 {
-  "directory": [
-    "src/domain",
-    "src/hooks",
-    "src/infra",
-    "src/lib",
-    "src/presentation"
-  ],
-  "exclude": ["src/app", "src/assets"],
+  "directory": ["src/hooks", "src/infra", "src/lib", "src/presentation"],
   "delete": true
 }

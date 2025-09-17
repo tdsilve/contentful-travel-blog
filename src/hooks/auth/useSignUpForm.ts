@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SignUpSchema, SignUpInput } from "@/domain";
+import { SignUpSchema, SignUpParams } from "@/presentation";
+import { authApi } from "@/infra";
 
 export const useSignUpForm = () => {
   const form = useForm({
@@ -8,7 +9,7 @@ export const useSignUpForm = () => {
       email: "",
       password: "",
       confirmPassword: "",
-      username: "",
+      name: "",
     },
     mode: "onSubmit",
     resolver: zodResolver(SignUpSchema),
@@ -18,7 +19,9 @@ export const useSignUpForm = () => {
     handleSubmit,
     formState: { isSubmitting },
   } = form;
-  const onSubmit = handleSubmit((data: SignUpInput) => console.log(data));
+  const onSubmit = handleSubmit(
+    async (data: SignUpParams) => await authApi().signUp(data),
+  );
 
   return {
     form,

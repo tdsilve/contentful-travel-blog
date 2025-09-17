@@ -3,14 +3,11 @@
  */
 
 export * from "./auth";
-export * from "./domain/auth/sign-in.schema";
-export * from "./domain/auth/sign-up.schema";
-export * from "./domain/http/http-client";
-export * from "./domain/http/types";
+export * from "./infra/http/types";
 export * from "./hooks/auth/useSignInForm";
 export * from "./hooks/auth/useSignUpForm";
-export * from "./infra/axios/api-client";
-export * from "./infra/axios/api";
+export * from "./infra/http/api/api-client";
+export * from "./infra/http/api/api";
 export * from "./lib/prisma";
 export * from "./lib/utils";
 export * from "./presentation/features/auth/header";

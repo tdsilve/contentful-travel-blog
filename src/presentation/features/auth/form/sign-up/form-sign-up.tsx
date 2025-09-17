@@ -16,7 +16,7 @@ export const FormSignUp = () => {
     <Form {...form}>
       <form onSubmit={onSubmit} className="space-y-4">
         <FormField
-          name="username"
+          name="name"
           control={control}
           render={({ field }) => (
             <FormItem>

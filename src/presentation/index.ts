@@ -16,3 +16,5 @@ export * from "./ui/form";
 export * from "./ui/input";
 export * from "./ui/label";
 export * from "./ui/logo/logo";
+export * from "./validation/auth/sign-in.schema";
+export * from "./validation/auth/sign-up.schema";
