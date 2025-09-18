@@ -3,5 +3,5 @@
  */
 
 export * from "./auth/auth-api";
-export * from "./http/api/api-client";
-export * from "./http/api/api";
+export * from "./protocols/http-client";
+export * from "./protocols/http-interfaces";

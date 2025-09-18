@@ -7,7 +7,7 @@ import {
   FormField,
   FormItem,
   FormMessage,
-  Button,
+  ButtonLoading,
 } from "@/presentation";
 
 export const FormSignIn = () => {
@@ -44,9 +44,14 @@ export const FormSignIn = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isSubmitting} className="w-full py-6">
+        <ButtonLoading
+          isLoading={isSubmitting}
+          disabled={isSubmitting}
+          type="submit"
+          className="w-full py-6"
+        >
           Login
-        </Button>
+        </ButtonLoading>
       </form>
     </Form>
   );

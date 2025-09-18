@@ -1,13 +1,12 @@
-import { HttpResponse, ApiClient } from "@/infra";
+import { IAuthApi, HttpResponse } from "@/domain";
+import { ApiClient } from "@/infra";
 import { SignInParams, SignUpParams } from "@/presentation";
+import { signIn, signOut } from "next-auth/react";
 
-class AuthApi {
+class AuthApi implements IAuthApi {
   private client = new ApiClient();
-  async signIn(params: SignInParams): Promise<HttpResponse> {
-    return this.client.post({
-      url: "/signin",
-      body: params,
-    });
+  async signIn({ email, password }: SignInParams): Promise<void> {
+    await signIn("credentials", { email, password });
   }
   async signUp(params: SignUpParams): Promise<HttpResponse> {
     return this.client.post({
@@ -18,6 +17,9 @@ class AuthApi {
         password: params.password,
       },
     });
+  }
+  async signOut(): Promise<void> {
+    await signOut();
   }
 }
 

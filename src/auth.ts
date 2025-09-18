@@ -18,7 +18,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
 
         const user = await prismadb.user.findUnique({
-          where: { email: credentials.email },
+          where: { email: credentials.email as string },
         });
 
         if (!user || !user.hashedPassword) {

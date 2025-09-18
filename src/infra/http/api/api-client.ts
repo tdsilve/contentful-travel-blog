@@ -1,4 +1,5 @@
-import { HttpParams, HttpResponse, HttpPostClient, api } from "@/infra";
+import { HttpParams, HttpResponse, HttpPostClient } from "@/domain";
+import { api } from "@/infra";
 
 export class ApiClient implements HttpPostClient {
   async post<R = any, B = any, E = any>(

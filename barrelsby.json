@@ -1,4 +1,10 @@
 {
-  "directory": ["src/hooks", "src/infra", "src/lib", "src/presentation"],
+  "directory": [
+    "src/hooks",
+    "src/infra",
+    "src/lib",
+    "src/presentation",
+    "src/domain"
+  ],
   "delete": true
 }

@@ -3,7 +3,7 @@
  */
 
 export * from "./auth";
-export * from "./infra/http/types";
+export * from "./domain/protocols/http-interfaces.ts";
 export * from "./hooks/auth/useSignInForm";
 export * from "./hooks/auth/useSignUpForm";
 export * from "./infra/http/api/api-client";
@@ -23,4 +23,4 @@ export * from "./presentation/ui/flex";
 export * from "./presentation/ui/form";
 export * from "./presentation/ui/input";
 export * from "./presentation/ui/label";
-export * from "./presentation/ui/logo/logo";
+export * from "./presentation/general/logo/logo";
